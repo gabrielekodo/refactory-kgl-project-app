@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KGL | Procurement</title>
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand"
+          style="font-size: 30px; font-weight: 600"
+          href="#"
+          >KGL</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 sidebar">
+          <h1 class="py-3 text-center text-light">Dashboard</h1>
+          <nav class="nav flex-column">
+            <a
+              class="nav-link text-light btn btn-secondary"
+              href="sales-dashboard.html"
+              >Record Sales</a
+            >
+            <a
+              class="nav-link text-light btn btn-primary"
+              href="sales-totals.html"
+              >Sales Summary</a
+            >
+            <a class="nav-link text-light btn btn-warning" href="index.html"
+              >Log out</a
+            >
+          </nav>
+        </div>
+
+        <div class="col card text-center login-card">
+          <div class="card-header">
+            <h3>Record Received Produce Here</h3>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row mb-3">
+                <label for="produce-name" class="col-sm-2 col-form-label"
+                  >Product Name</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="produce-name"
+                    id="produce-name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="produce-type" class="col-sm-2 col-form-label"
+                  >Produce Type</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="produce-type"
+                    name="produce-type"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="produce-source" class="col-sm-2 col-form-label"
+                  >Produce Source</label
+                >
+                <div class="col-sm-10">
+                  <select
+                    name="produce-source"
+                    class="form-control"
+                    id="produce-source"
+                  >
+                    <option value="default">Choose Produce Source</option>
+                    <option value="dealer">Dealer</option>
+                    <option value="company">Company</option>
+                    <option value="maganjo">Maganjo Farm</option>
+                    <option value="matugga">Matugga Farm</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="date" class="col-sm-2 col-form-label">Date</label>
+                <div class="col-sm-10">
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="date"
+                    name="date"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="time" class="col-sm-2 col-form-label">Time</label>
+                <div class="col-sm-10">
+                  <input
+                    type="time"
+                    class="form-control"
+                    id="time"
+                    name="time"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="tonnage" class="col-sm-2 col-form-label"
+                  >Tonnage(in kgs)</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="tonnage"
+                    name="tonnage"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="cost-price" class="col-sm-2 col-form-label"
+                  >Cost Price(Ugx)</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="cost-price"
+                    name="cost"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="dealer-name" class="col-sm-2 col-form-label"
+                  >Dealer's Name</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="dealer-name"
+                    name="dealer"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="branch-name" class="col-sm-2 col-form-label"
+                  >Branch Name</label
+                >
+                <div class="col-sm-10">
+                  <select name="branch" class="form-control" id="branch-name">
+                    <option value="default">Choose Branch</option>
+                    <option value="BA">Branch One</option>
+                    <option value="BC">Branch Two</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="contact" class="col-sm-2 col-form-label"
+                  >Dealer's Contact</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="contact"
+                    name="phone"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="selling-price" class="col-sm-2 col-form-label"
+                  >Selling Price</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="selling-price"
+                    name="selling-price"
+                    required
+                  />
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Submit Record
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="navbar-expand-lg navbar-dark bg-dark">
+      <p>&copy; Karibu Groceries Limited 2022</p>
+    </footer>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="forms.js"></script>
+  </body>
+</html>
