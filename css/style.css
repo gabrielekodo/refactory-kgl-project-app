@@ -1,27 +1,41 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,700;1,100;1,300;1,500;1,600&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,700;1,100;1,300;1,500;1,600&display=swap");
 body {
-  height: 100vh;
-  background-color: #f4f4f4;
+  /* min-height: 100vh; */
+  background-color: rgba(242, 229, 242, 0.267);
   position: relative;
-
-  overflow-x: hidden;
+  background-image: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* overflow-x: hidden; */
   font-family: "Poppins", sans-serif !important;
 }
-nav,
+
+.navbar-brand img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.navbar,
 footer {
-  min-height: 13vh;
+  min-height: 10vh;
 }
 footer {
+  /* position: fixed; */
+  bottom: 0;
   width: 100%;
   background-color: #212529 !important;
 }
 footer p {
   color: #f4f4f4;
   text-align: center;
-  padding: 20px;
+  
 
   font-size: 1.5rem;
 }
+
 .carousel-item img {
   width: 100%;
   height: 100% !important;
@@ -30,29 +44,47 @@ footer p {
 a {
   text-decoration: none;
 }
-label {
-  width: 200px !important;
-  text-align: start;
-}
+
 #carouselExampleIndicators {
-  height: 80vh;
+  /* position: relative; */
+  height: 100vh;
+
+  background-blend-mode: screen;
+  -webkit-clip-path: polygon(25% 0, 100% 0, 100% 40%, 75% 100%, 0 100%, 0 60%);
+  clip-path: polygon(
+    25% 0,
+    100% 0,
+    100% 40%,
+    75% 100%,
+    0 100%,
+    0 60%
+  ) !important;
 }
-.col-sm-10 {
-  width: 100% !important;
+.logo-container {
+  position: absolute;
+  background-color: red;
+  top: 0;
+  left: 0;
+  background: transparent;
+  opacity: 0.7;
+  z-index: 1000;
+  margin: 10px;
 }
+
 
 /* welcome header */
 .welcome {
-  width: 60%;
-  padding: 0.76rem;
+  width: 70%;
+  height: 15rem;
+  padding: 1rem;
   position: absolute;
   background-color: rgba(240, 220, 220, 0.4);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  /* clip-path: polygon(1% 0%, 100% 0%, 75% 100%, 0% 100%); */
-  border-radius: 6px;
+
+  border-radius: 9px;
   top: 35%;
-  left: 25%;
+  left: 20%;
   animation: welcome 3s;
   animation-fill-mode: forwards;
 }
@@ -67,18 +99,24 @@ label {
 }
 .welcome-heading {
   font-family: "Poppins", sans-serif;
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin-bottom: -10px;
-  line-height: 2.8rem;
+  margin-bottom: 8px;
+  margin-left: 10px;
+  line-height: 3rem;
   padding-bottom: 0;
   animation: welcome-heading 3s;
   animation-fill-mode: forwards;
   position: relative;
+  position: absolute;
+  left: 0;
+  top: 5%;
 }
-
+.welcome-heading span {
+  color: rgb(249, 105, 0);
+}
 @keyframes welcome-heading {
   0% {
     opacity: 0;
@@ -91,15 +129,19 @@ label {
 }
 
 .welcome-sub {
-  font-size: 30px;
+  font-size: 40px;
   font-family: inherit;
   font-weight: 400;
-  margin-top: 2px;
+  margin-top: 10px;
+  margin-left: 10px;
   padding-top: 0;
   animation: welcome-sub 2s;
   animation-fill-mode: forwards;
 
   position: relative;
+  position: absolute;
+  left: 0;
+  top: 40%;
 }
 @keyframes welcome-sub {
   0% {
@@ -112,8 +154,8 @@ label {
   }
 }
 .welcome-login {
-  border-radius: 25px;
-  margin: 5px auto;
+  border-radius: 4px;
+  margin: 5px 10px;
   padding: 4px;
   display: block;
   text-align: center;
@@ -124,21 +166,24 @@ label {
   animation: login 2s;
   animation-fill-mode: forwards;
   position: relative;
+  position: absolute;
+  left: 0;
+  top: 80%;
 }
 .welcome-login:hover {
   background-color: rgb(7, 46, 85);
   box-shadow: 2px 1.5px 4px rgba(18, 52, 86, 0.34);
-  transform: scale(1.1);
+  transform: scale(0.9);
   letter-spacing: 2px;
 }
 @keyframes login {
   0% {
     opacity: 0;
-    top: 0%;
+    bottom: -100%;
   }
   100% {
     opacity: 1;
-    top: 35%;
+    bottom: 0%;
   }
 }
 
@@ -166,15 +211,21 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-  outline: none !important;
-  border: 2.5px solid #05344a !important;
-  outline: 3px;
+  outline: solid !important;
+  border: 1.5px solid #05344a !important;
+  background-color: rgba(191, 193, 194, 0.23) !important;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 /* login page */
+
+.log-btn,
+.reg-btn {
+  border: 1px solid #333;
+}
+
 .login-card,
 .login {
-  margin: 4rem auto;
+  margin: 3rem auto;
 
   /* border: 2.5px solid #123456; */
   box-shadow: 2.5px 3px 5px #1a1c1e;
@@ -182,6 +233,12 @@ select:focus {
 .login {
   max-width: 600px;
 }
+#userphone,
+#role,
+#username,
+#user-email,
+#user-password,
+#confirm-password,
 #inputEmail3,
 #inputPassword3 {
   border-radius: 0;
@@ -190,7 +247,14 @@ select:focus {
   border-right: none !important;
   border-left: none !important;
   border-bottom: 2.5px solid #333 !important;
+  opacity: 0.89;
 }
+#userphone:focus,
+#role:focus,
+#username:focus,
+#user-email:focus,
+#user-password:focus,
+#confirm-password:focus,
 #inputEmail3:focus,
 #inputPassword3:focus {
   outline: solid !important;
@@ -202,11 +266,11 @@ select:focus {
 }
 
 .col .card {
-  margin: 1rem 0.5rem;
+  margin: 0.6rem 0.5rem;
   border: 2.5px solid #bfc1c2;
   box-shadow: -6px 5px 10.5px #1a1c1e;
 
-  height: 400px;
+  /* height: 300px; */
 }
 table {
   margin: 1rem 0.3rem;
@@ -218,7 +282,7 @@ table {
 }
 
 .sidebar {
-  width: 425px;
+  /* width: 425px; */
   background-color: #111;
 }
 
@@ -231,4 +295,5 @@ table {
 
 .flex-column a:hover {
   background-color: #bfc1c2;
-}
+} 
+ 

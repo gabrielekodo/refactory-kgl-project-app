@@ -41,160 +41,162 @@
     </nav>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3 sidebar">
-          <h1 class="py-3 text-center text-light">Dashboard</h1>
+        <div class="col col-md-3 sidebar ">
+          <h1 class="py-3 text-center text-light">Gabriel Ekodo</h1>
           <nav class="nav flex-column">
-            <a
-              class="nav-link text-light btn btn-secondary"
-              href="sales-dashboard.html"
-              >Record Sales</a
+            <button class="nav-link text-light btn btn-warning mb-3">
+              Record Received Stock
+            </button>
+
+            <button class="nav-link text-light btn btn-secondary bg-success mb-3">
+              Record Cash Sale
+            </button>
+
+            <button class="nav-link text-light btn btn-secondary mb-3">
+              Record Credit Sale
+            </button>
+            <a class="nav-link text-light btn btn-warning mb-3" href="totals.html"
+              >View Sales Summary</a
             >
-            <a
-              class="nav-link text-light btn btn-primary"
-              href="sales-totals.html"
-              >Sales Summary</a
-            >
+            <button class="nav-link text-light btn btn-primary mb-3">
+              Notifications
+            </button>
             <a class="nav-link text-light btn btn-warning" href="index.html"
               >Log out</a
             >
           </nav>
         </div>
 
-        <div class="col card text-center login-card">
+        <!-- PROCUREMENT INPUT DATA -->
+        <div id="procure" class="col card login-card ">
           <div class="card-header">
             <h3>Record Received Produce Here</h3>
           </div>
           <div class="card-body">
-            <form>
-              <div class="row mb-3">
-                <label for="produce-name" class="col-sm-2 col-form-label"
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="produce-name" class="form-label"
                   >Product Name</label
                 >
-                <div class="col-sm-10">
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="produce-name"
-                    id="produce-name"
-                    required
-                  />
-                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="produce-name"
+                  id="produce-name"
+                  required
+                />
+               
               </div>
-              <div class="row mb-3">
-                <label for="produce-type" class="col-sm-2 col-form-label"
+              <div class="col-md-6">
+                <label for="produce-type" class="form-label"
                   >Produce Type</label
                 >
-                <div class="col-sm-10">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="produce-type"
-                    name="produce-type"
-                    required
-                  />
-                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="produce-type"
+                  name="produce-type"
+                  required
+                />
+                
               </div>
-              <div class="row mb-3">
-                <label for="produce-source" class="col-sm-2 col-form-label"
+              <div class="col-md-6">
+                <label for="produce-source" class="form-label"
                   >Produce Source</label
                 >
-                <div class="col-sm-10">
-                  <select
-                    name="produce-source"
-                    class="form-control"
-                    id="produce-source"
-                  >
-                    <option value="default">Choose Produce Source</option>
-                    <option value="dealer">Dealer</option>
-                    <option value="company">Company</option>
-                    <option value="maganjo">Maganjo Farm</option>
-                    <option value="matugga">Matugga Farm</option>
-                  </select>
-                </div>
+                <select
+                  name="produce-source"
+                  class="form-select"
+                  id="produce-source"
+                >
+                  <option value="default">Choose Produce Source</option>
+                  <option value="dealer">Dealer</option>
+                  <option value="company">Company</option>
+                  <option value="maganjo">Maganjo Farm</option>
+                  <option value="matugga">Matugga Farm</option>
+                </select>
+               
               </div>
-              <div class="row mb-3">
-                <label for="date" class="col-sm-2 col-form-label">Date</label>
-                <div class="col-sm-10">
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="date"
-                    name="date"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="row mb-3">
-                <label for="time" class="col-sm-2 col-form-label">Time</label>
-                <div class="col-sm-10">
-                  <input
-                    type="time"
-                    class="form-control"
-                    id="time"
-                    name="time"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="row mb-3">
-                <label for="tonnage" class="col-sm-2 col-form-label"
+              <div class="col-md-6">
+                <label for="tonnage" class="form-label"
                   >Tonnage(in kgs)</label
                 >
-                <div class="col-sm-10">
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="tonnage"
-                    name="tonnage"
-                    required
-                  />
-                </div>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="tonnage"
+                  name="tonnage"
+                  min="1000"
+                  required
+                />
+                
               </div>
-              <div class="row mb-3">
-                <label for="cost-price" class="col-sm-2 col-form-label"
+              <div class="col-md-6">
+                <label for="date" class="form-label">Date</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="date"
+                  name="date"
+                  required
+                />
+                
+              </div>
+              <div class="col-md-6">
+                <label for="time" class="form-label">Time</label>
+                <input
+                  type="time"
+                  class="form-control"
+                  id="time"
+                  name="time"
+                  required
+                />
+                
+              </div>
+              
+              <div class="col-md-6">
+                <label for="cost-price" class="form-label"
                   >Cost Price(Ugx)</label
                 >
-                <div class="col-sm-10">
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="cost-price"
-                    name="cost"
-                    required
-                  />
-                </div>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="cost-price"
+                  name="cost"
+                  required
+                />
+                
               </div>
-              <div class="row mb-3">
-                <label for="dealer-name" class="col-sm-2 col-form-label"
+              <div class="col-md-6">
+                <label for="dealer-name" class="form-label"
                   >Dealer's Name</label
                 >
-                <div class="col-sm-10">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="dealer-name"
-                    name="dealer"
-                    required
-                  />
-                </div>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="dealer-name"
+                  name="dealer"
+                  required
+                />
+                
               </div>
-              <div class="row mb-3">
-                <label for="branch-name" class="col-sm-2 col-form-label"
+              <div class="col-md-6">
+                <label for="branch-name" class="form-label"
                   >Branch Name</label
                 >
-                <div class="col-sm-10">
-                  <select name="branch" class="form-control" id="branch-name">
-                    <option value="default">Choose Branch</option>
-                    <option value="BA">Branch One</option>
-                    <option value="BC">Branch Two</option>
-                  </select>
-                </div>
+                <select name="branch" class="form-select" id="branch-name">
+                  <option value="default">Choose Branch</option>
+                  <option value="BA">Branch One</option>
+                  <option value="BC">Branch Two</option>
+                </select>
+                
               </div>
-              <div class="row mb-3">
-                <label for="contact" class="col-sm-2 col-form-label"
+              <div class="col-md-6">
+                <label for="contact" class="form-label"
                   >Dealer's Contact</label
                 >
-                <div class="col-sm-10">
+                
                   <input
                     type="tel"
                     class="form-control"
@@ -202,28 +204,403 @@
                     name="phone"
                     required
                   />
-                </div>
+                
               </div>
-              <div class="row mb-3">
-                <label for="selling-price" class="col-sm-2 col-form-label"
+              <div class="col-md-6">
+                <label for="selling-price" class="form-label"
                   >Selling Price</label
                 >
-                <div class="col-sm-10">
+                
                   <input
                     type="number"
                     class="form-control"
                     id="selling-price"
                     name="selling-price"
+                    value="2500"
+                    disabled
                     required
                   />
-                </div>
+                
               </div>
 
-              <button type="submit" class="btn btn-primary">
-                Submit Record
-              </button>
+              <div class="col-12">
+
+                <button type="submit" class="btn btn-primary">
+                  Submit Record
+                </button>
+              </div>
             </form>
           </div>
+        </div>
+
+        <!-- CASH SALES RECORDING -->
+
+        <div id="cash" class="col card  login-card d-none">
+          <div class="card-header">
+            <h3>Enter Cash Sale</h3>
+          </div>
+          <div class="card-body">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="produce-name" class="form-label"
+                  >Product Name</label
+                >
+                
+                  <select
+                    name="produce-name"
+                    class="form-select"
+                    id="branch-name"
+                  >
+                    <option value="default">Choose Produce</option>
+                    <option value="beans">Beans</option>
+                    <option value="maize">Maize</option>
+                    <option value="gnuts">Groundnuts</option>
+                    <option value="soybeans">Soybeans</option>
+                    <option value="cowpeas">Cowpeas</option>
+                  </select>
+                
+              </div>
+
+              <div class="col-md-6">
+                <label for="tonnage" class="form-label"
+                  >Tonnage(in kgs)</label
+                >
+                
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="tonnage"
+                    name="tonnage"
+                    required
+                  />
+                
+              </div>
+              <div class="col-md-6">
+                <label for="amount-paid" class="form-label"
+                  >Amount Paid(Ugx)</label
+                >
+               
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="amount-paid"
+                    name="amount"
+                    required
+                  />
+               
+              </div>
+
+              <div class="col-md-6">
+                <label for="branch-name" class="form-label"
+                  >Branch Name</label
+                >
+               
+                  <select name="branch" class="form-select" id="branch-name">
+                    <option value="default">Choose Branch</option>
+                    <option value="BA">Branch One</option>
+                    <option value="BC">Branch Two</option>
+                  </select>
+                
+              </div>
+              <div class="col-md-6">
+                <label for="buyer-name" class="form-label"
+                  >Buyer's Name</label
+                >
+               
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="buyer-name"
+                    name="dealer"
+                    required
+                  />
+               
+              </div>
+              <div class="col-md-6">
+                <label for="contact" class="form-label"
+                  >Buyer's Contact</label
+                >
+               
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="contact"
+                    name="phone"
+                    required
+                  />
+               
+              </div>
+              <div class="col-md-6">
+                <label for="date" class="form-label">Date</label>
+               
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="date"
+                    name="date"
+                    required
+                  />
+              
+              </div>
+              <div class="col-md-6">
+                <label for="time" class="form-label">Time</label>
+               
+                  <input
+                    type="time"
+                    class="form-control"
+                    id="time"
+                    name="time"
+                    required
+                  />
+               
+              </div>
+<div class="col-12">
+
+  <button type="submit" class="btn btn-primary">
+    Submit Record
+  </button>
+</div>
+            </form>
+          </div>
+        </div>
+
+        <!-- CREDIT SALES INPUT -->
+        <div id="credit" class="col card  login-card d-none ">
+          <div class="card-header">
+            <h3>Record Credit Sale Here Details</h3>
+          </div>
+          <div class="card-body">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="buyer-name" class="form-label"
+                  >Buyer's Name</label
+                >
+                
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="buyer-name"
+                    name="dealer"
+                    required
+                  />
+                
+              </div>
+              <div class="col-md-6">
+                <label for="buyer-location" class="form-label"
+                  >Buyer's Location</label
+                >
+                
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="buyer-location"
+                    name="buyer-location"
+                    required
+                  />
+                
+              </div>
+              <div class="col-md-6">
+                <label for="buyer-id" class="form-label"
+                  >ID Number(NIN)</label
+                >
+                
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="buyer-id"
+                    name="nin"
+                    required
+                  />
+                
+              </div>
+              <div class="col-md-6">
+                <label for="contact" class="form-label"
+                  >Buyer's Contact</label
+                >
+                
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="contact"
+                    name="phone"
+                    required
+                  />
+                
+              </div>
+              <div class="col-md-6">
+                <label for="produce-name" class="form-label"
+                  >Product Name</label
+                >
+                
+                  <select
+                    name="produce-name"
+                    class="form-select"
+                    id="branch-name"
+                  >
+                    <option value="default">Choose Produce</option>
+                    <option value="beans">Beans</option>
+                    <option value="maize">Maize</option>
+                    <option value="gnuts">Groundnuts</option>
+                    <option value="soybeans">Soybeans</option>
+                    <option value="cowpeas">Cowpeas</option>
+                  </select>
+                
+              </div>
+              <div class="col-md-6">
+                <label for="produce-type" class="form-label"
+                  >Product Type</label
+                >
+                
+                  <select
+                    name="produce-type"
+                    class="form-select"
+                    id="branch-name"
+                  >
+                    <option value="default">Choose Produce Type</option>
+                    <option value="cereals">Cereal</option>
+                    <option value="legumes">Legumes</option>
+                  </select>
+                
+              </div>
+
+              <div class="col-md-6">
+                <label for="tonnage" class="form-label"
+                  >Tonnage(in kgs)</label
+                >
+                
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="tonnage"
+                    name="tonnage"
+                    required
+                  />
+                
+              </div>
+              <div class="col-md-6">
+                <label for="amount-paid" class="form-label"
+                  >Amount Paid(Ugx)</label
+                >
+                
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="amount-paid"
+                    name="amount"
+                    required
+                  />
+                
+              </div>
+              <div class="col-md-6">
+                <label for="amount-due" class="form-label"
+                  >Amount Due(Ugx)</label
+                >
+                
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="amount-due"
+                    name="due-amount"
+                    required
+                  />
+                
+              </div>
+
+              <div class="col-md-6">
+                <label for="branch-name" class="form-label"
+                  >Branch Name</label
+                >
+                
+                  <select name="branch" class="form-select" id="branch-name">
+                    <option value="default">Choose Branch</option>
+                    <option value="BA">Branch One</option>
+                    <option value="BC">Branch Two</option>
+                  </select>
+                
+              </div>
+
+              <div class="col-md-6">
+                <label for="date" class="form-label"
+                  >Purchase Date</label
+                >
+                
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="date"
+                    name="date"
+                    required
+                  />
+                
+              </div>
+              <div class="col-md-6">
+                <label for="due-date" class="form-label"
+                  >Due Date</label
+                >
+                
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="due-date"
+                    name="due-date"
+                    required
+                  />
+                
+              </div>
+              <div class="col-md-6">
+                <label for="dispatch-date" class="form-label"
+                  >Dispatch Date</label
+                >
+                
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="dispatch-date"
+                    name="dispatch-date"
+                    required
+                  />
+                
+              </div>
+              <div class="col-md-6">
+                <label for="time" class="form-label"
+                  >Dispatch Time</label
+                >
+                
+                  <input
+                    type="time"
+                    class="form-control"
+                    id="time"
+                    name="dispatch-time"
+                    required
+                  />
+                
+              </div>
+              <div class="col-md-6">
+                <label for="agent-name" class="form-label"
+                  >Agent's Name</label
+                >
+                
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="agent-name"
+                    name="agent"
+                    required
+                  />
+                
+              </div>
+<div class="col-12">
+
+  <button type="submit" class="btn btn-primary">
+    Submit Record
+  </button>
+</div>
+            </form>
+          </div>
+        </div>
+        <!-- Notifications -->
+        <div id="notification" class="col  card  login-card mx-3 d-none">
+          <h1 class="text-danger">The following products are out of stock.</h1>
         </div>
       </div>
     </div>
@@ -231,6 +608,6 @@
       <p>&copy; Karibu Groceries Limited 2022</p>
     </footer>
     <script src="js/bootstrap.min.js"></script>
-    <script src="forms.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
